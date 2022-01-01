@@ -36,7 +36,18 @@ class Queue {
             }
         };
 
+        int deleteNode() {
+            if(isEmpty()) {
+                cout << "Queue is empty!" << endl;
+                return -1;
+            }
 
+            Node *temp = front;
+            int x = front->data;
+            front = front->next;
+            delete temp;
+            return x;
+        };
 };
 
 int main(){
