@@ -18,6 +18,25 @@ class Queue {
             rear = NULL;
         };
 
+        bool isEmpty() {
+            return front == NULL;
+        };
+
+        void addNode(int data) {
+            Node *n = new Node;
+            n->data = data;
+            n->next = NULL;
+
+            if(rear != NULL) {
+                rear->next = n;
+            }
+            rear = n;
+            if(isEmpty()) {
+                front = rear;
+            }
+        };
+
+
 };
 
 int main(){
