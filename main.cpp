@@ -48,8 +48,31 @@ class Queue {
             delete temp;
             return x;
         };
+
+        void display() {
+            if(isEmpty()) {
+                cout << "Queue is empty!" << endl;
+                return;
+            }
+
+            Node *temp = front;
+            while(temp != NULL) {
+                cout << temp->data << endl;
+                temp = temp->next;
+            };
+        };
 };
 
 int main(){
+    Queue myQueue;
+    myQueue.addNode(10);
+    myQueue.addNode(20);
+    myQueue.addNode(30);
+
+    myQueue.deleteNode();
+
+
+    myQueue.display();
+
     return 0;
 }
