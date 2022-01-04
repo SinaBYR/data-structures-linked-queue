@@ -34,6 +34,8 @@ class Queue {
             if(isEmpty()) {
                 front = rear;
             }
+
+            cout << "Value " << data << " was successfully added to queue." << endl;
         };
 
         int deleteNode() {
@@ -46,6 +48,7 @@ class Queue {
             int x = front->data;
             front = front->next;
             delete temp;
+            cout << "Value " << x << " was deleted successfully." << endl;
             return x;
         };
 
@@ -55,6 +58,7 @@ class Queue {
                 return;
             }
 
+            cout << "Queue items are: " << endl;
             Node *temp = front;
             while(temp != NULL) {
                 cout << temp->data << endl;
